@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="EncryptCookies.php" server="ec2-54-67-10-196.us-west-1.compute.amazonaws.com//var/www/html/irrigation/" local="131862715520000000" remote="131862715520000000" Dst="1" />
+<file name="RedirectIfAuthenticated.php" server="ec2-54-67-10-196.us-west-1.compute.amazonaws.com//var/www/html/irrigation/" local="131862715520000000" remote="131862715520000000" Dst="1" />
+<file name="CheckForMaintenanceMode.php" server="ec2-54-67-10-196.us-west-1.compute.amazonaws.com//var/www/html/irrigation/" local="131862715520000000" remote="131862715520000000" Dst="1" />
+<file name="TrimStrings.php" server="ec2-54-67-10-196.us-west-1.compute.amazonaws.com//var/www/html/irrigation/" local="131862715520000000" remote="131862715520000000" Dst="1" />
+<file name="VerifyCsrfToken.php" server="ec2-54-67-10-196.us-west-1.compute.amazonaws.com//var/www/html/irrigation/" local="131862715520000000" remote="131862715520000000" Dst="1" />
+<file name="TrustProxies.php" server="ec2-54-67-10-196.us-west-1.compute.amazonaws.com//var/www/html/irrigation/" local="131862715520000000" remote="131862715520000000" Dst="1" />
+<file name="Authenticate.php" server="ec2-54-67-10-196.us-west-1.compute.amazonaws.com//var/www/html/irrigation/" local="131862715520000000" remote="131862715520000000" Dst="1" />
+</dwsync>
