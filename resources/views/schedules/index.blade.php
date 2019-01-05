@@ -22,9 +22,24 @@
               <td> {{$schedule->anchor_day}} </td>
               <td> {{$schedule->weather_factor_id}} </td>
               <td> {{$schedule->season_factor_id}} </td>
+              
+              <td> 
+                <a href="/schedules/{{$schedule->id}}/edit" class = "btn btn-success">Edit</a>
+              </td>
+                  
+              <td> 
+              {!! Form::open(['action' => ['SchedulesController@destroy',$schedule->id],'method' => 'DELETE', 'class' => 'pull-right'])!!} 
+                  {{Form::submit('Delete', array('class' => 'btn btn-danger'))}}
+              {!! Form::close() !!}
+              </td>
           </tr>
          @endforeach
    </tbody>
 </table>
+        {{$schedules->links()}}
 </div>
+
+<a href="/schedules/create" class="btn btn-primary">Add Schedule</a>
+
+
 @endsection
