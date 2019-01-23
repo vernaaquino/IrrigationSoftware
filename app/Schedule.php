@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Zone;
 
 class Schedule extends Model
 {
@@ -11,4 +12,10 @@ class Schedule extends Model
     
     //primary key (optional)
     public $primarykey = 'id';
+    
+    
+    public function zones()
+    {
+        return $this->hasMany('App\Zone');
+    }
 }
