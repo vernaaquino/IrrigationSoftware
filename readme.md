@@ -8,7 +8,7 @@ insert Comp490 Project description
 * Developer - [Chris Nguyen](https://github.com/ilovecrt)
 * Developer - [Dvin Badalzadeh](https://github.com/DBadalzadehCSUN)
 * Developer - [Ghazal Jain](https://github.com/GhazalJain)
-* Developer - [Kevin Lim](https://github.com)
+* Developer - [Kevin Lim](https://github.com/kikunojojou)
 
 ## Technologies Used
 - Laravel
