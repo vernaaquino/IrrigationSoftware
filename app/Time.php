@@ -8,6 +8,6 @@ class Time extends Model
 {
     public function requirement()
 	{
-		return $this->belongsTo('App\Time');
+		return $this->belongsTo('App\Requirement');
 	}
 }
