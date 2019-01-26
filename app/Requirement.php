@@ -14,5 +14,10 @@ class Requirement extends Model
     {
         return $this->belongsTo('App\Schedule');
     }
+	
+	public function time()
+	{
+		return $this->hasOne('App\Time');
+	}
 }
  
