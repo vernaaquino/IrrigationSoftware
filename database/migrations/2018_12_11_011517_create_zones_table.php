@@ -15,7 +15,7 @@ class CreateZonesTable extends Migration
     {
         Schema::create('zones', function (Blueprint $table) {
             $table->increments('id');
-            
+            $table->string('name');
             $table->integer('schedule_id')->unsigned();
             $table->foreign('schedule_id')->references('id')->on('schedules');
             

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Valve;
+use App\Zone;
 
 class ValvesController extends Controller
 {
@@ -25,7 +26,8 @@ class ValvesController extends Controller
      */
     public function create()
     {
-        return view('valves.create');
+        $zones = Zone::pluck('name', 'id');
+        return view('valves.create')->with('zones',$zones);
     }
 
     /**
@@ -44,7 +46,10 @@ class ValvesController extends Controller
         $valve->diameter = $request->input('diameter');
         $valve->pressure = $request->input('pressure');
         $valve->metadata = $request->input('metadata');
+        
+        $zones = $request->input('zones');
         $valve->save();
+        $valve->zones()->sync($zones); //zones is an array of zones that the valve is a part of
         
         return redirect('valves');
     }
@@ -53,7 +58,7 @@ class ValvesController extends Controller
      * Display the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminaite\Http\Response
      */
     public function show($id)
     {

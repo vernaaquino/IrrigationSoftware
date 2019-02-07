@@ -20,3 +20,4 @@ Auth::routes(); //automatically sets routes for the Auth folder controllers?
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('schedules','SchedulesController');
 Route::resource('valves','ValvesController');
+Route::resource('zones','ZonesController');

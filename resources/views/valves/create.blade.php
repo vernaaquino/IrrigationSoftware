@@ -6,7 +6,7 @@
     {!! Form::open(['action' => 'ValvesController@store','method' => 'POST'])!!}  
       <div class = "form-group">
             {{Form::label('flow_rate','Flow Rate')}}
-            {{Form::text('flow_rate','',['class'=>'form-control'])}}
+            {{Form::number('flow_rate','',['class'=>'form-control'])}}
         </div>
 
         <div class = "form-group">
@@ -38,6 +38,17 @@
             
             {{Form::text('metadata','',['class'=>'form-control'])}}
         </div>
+
+        <div class="form-group">
+            {!! Form::label('Zones') !!}<br />
+            {!! Form::select('zones[]', 
+            $zones, 
+            null, 
+            ['class' => 'form-control', 
+            'multiple' => 'multiple']) !!}
+        </div>
+
+
         {{Form::submit('Submit', array('class' => 'btn btn-primary'))}}
 
     {!! Form::close() !!}
