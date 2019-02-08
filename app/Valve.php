@@ -10,5 +10,4 @@ class Valve extends Model
     {
         return $this->belongsToMany('App\Zone');
     }
-    
 }
