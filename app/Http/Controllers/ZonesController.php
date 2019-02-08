@@ -16,7 +16,8 @@ class ZonesController extends Controller
      */
     public function index()
     {
-        return Zone::find(2)->schedule;
+        $zones = Zone::paginate(10); //get
+        return view('zones.index')->with('zones',$zones);
     }
 
     /**
@@ -26,7 +27,7 @@ class ZonesController extends Controller
      */
     public function create()
     {
-        $schedules = Schedule::pluck('name', 'id');
+        $schedules = Schedule::pluck('name','id');
         $valves = Valve::pluck('id','id');
         return view('zones.create')->with('schedules',$schedules)->with('valves',$valves);
     }
@@ -39,7 +40,7 @@ class ZonesController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request,['name'=>'required','schedule_id'=>'required']);
+        $this->validate($request,['name'=>'required','schedule_id'=>'required','valves'=>'required']);
         $zone = new Zone;
         $zone->name = $request->input('name');
         $zone->schedule_id = $request->input('schedule_id');
@@ -48,6 +49,7 @@ class ZonesController extends Controller
         $zone->save();
         $zone->valves()->sync($valves);
         
+        return redirect('zones');
     }
 
     /**
@@ -69,7 +71,11 @@ class ZonesController extends Controller
      */
     public function edit($id)
     {
-        //
+        $zone = Zone::find($id); //find the zone you want to edit
+        $schedules = Schedule::pluck('name','id');
+        $valves = Valve::pluck('id','id');
+        
+        return view('zones/edit')->with('zone',$zone)->with('schedules',$schedules)->with('valves',$valves); 
     }
 
     /**
@@ -81,7 +87,16 @@ class ZonesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request,['name'=>'required','schedule_id'=>'required','valves'=>'required']);
+        $zone = Zone::find($id);
+        $zone->name = $request->input('name');
+        $zone->schedule_id = $request->input('schedule_id');
+        
+        $valves= $request->input('valves');
+        $zone->save();
+        $zone->valves()->sync($valves);
+
+        return redirect('zones');
     }
 
     /**
@@ -92,6 +107,8 @@ class ZonesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $zone = Zone::find($id);
+        $zone->delete();
+        return redirect('zones');
     }
 }
