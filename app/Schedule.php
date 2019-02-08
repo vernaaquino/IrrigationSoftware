@@ -11,4 +11,11 @@ class Schedule extends Model
     
     //primary key (optional)
     public $primarykey = 'id';
+    
+    
+    public function zones()
+    {
+        return $this->hasMany('App\Zone');
+    }
+    
 }
