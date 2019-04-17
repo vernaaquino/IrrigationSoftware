@@ -29,7 +29,7 @@ And that's it, go to your domain and login:
 Email: admin@admin.com
 Password: password
 
-P.S. If you want to use this admin panel for existing project, [here's an article with instructions] (https://quickadminpanel.com/blog/using-quickadmin-for-existing-laravel-project/)
+P.S. If you want to use this admin panel for existing project, [here's an article with instructions](https://quickadminpanel.com/blog/using-quickadmin-for-existing-laravel-project/)
 
 Notice: if you use CKEditor fields, there are a few more commands to launch for Laravel Filemanager package:
 php artisan vendor:publish --tag=lfm_config
