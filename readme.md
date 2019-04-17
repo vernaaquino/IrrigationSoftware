@@ -1,7 +1,7 @@
 # CSUN Irrigation Software
 
 ## About
-insert Comp490 Project description
+An attempt to create a software Irrigation Scheduling System.
 
 ## Contributors
 * Developer - [Maria Verna Aquino](https://github.com/mra88897)
