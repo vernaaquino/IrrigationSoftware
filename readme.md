@@ -13,7 +13,7 @@ An attempt to create a software Irrigation Scheduling System.
 ## Technologies Used
 - Laravel
 
-## Laravel Setup
+### Laravel Setup
 1. Extract the archive and put it in the folder you want
 
 2. Prepare your .env file there with database connection and other settings
