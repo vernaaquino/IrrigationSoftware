@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Valve;
-use App\Zone;
+use App\Models\Valve;
+use App\Models\Zone;
 
 class ValvesController extends Controller
 {

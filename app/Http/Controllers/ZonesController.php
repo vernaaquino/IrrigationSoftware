@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Zone;
-use App\Schedule;
-use App\Valve;
+use App\Models\Zone;
+use App\Models\Schedule;
+use App\Models\Valve;
 
 class ZonesController extends Controller
 {

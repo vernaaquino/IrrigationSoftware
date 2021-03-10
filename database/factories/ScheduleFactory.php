@@ -24,10 +24,10 @@ class ScheduleFactory extends Factory
     {
         return [
             'name' => $this->faker->name,
-            'num_of_days' => $faker->randomNumber($nbDigits = 2),
-            'anchor_day' => $faker->date($format = 'Y-m-d', $max = 'now'),
-            'weather_factor_id' => $faker->unique()->randomNumber($nbDigits = 4),
-            'season_factor_id' => $faker->unique()->randomNumber($nbDigits = 4),
+            'num_of_days' => $this->faker->randomNumber($nbDigits = 2),
+            'anchor_day' => $this->faker->date($format = 'Y-m-d', $max = 'now'),
+            'weather_factor_id' => $this->faker->unique()->randomNumber($nbDigits = 4),
+            'season_factor_id' => $this->faker->unique()->randomNumber($nbDigits = 4),
         ];
     }
 }

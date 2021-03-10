@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 use Illuminate\Database\Seeder;
+use App\Models\Schedule;
 
 class ScheduleSeeder extends Seeder
 {
@@ -12,7 +13,8 @@ class ScheduleSeeder extends Seeder
      */
     public function run()
     {
-        //
-        factory(App\Schedule::class, 3)->create();
+        Schedule::factory()
+            ->count(3)
+            ->create();
     }
 }

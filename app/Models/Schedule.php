@@ -1,11 +1,14 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Schedule extends Model
 {
+    use HasFactory;
+
     //table name (optional)
     protected $table = 'schedules';
     
@@ -15,7 +18,7 @@ class Schedule extends Model
     
     public function zones()
     {
-        return $this->hasMany('App\Zone');
+        return $this->hasMany('App\Models\Zone');
     }
     
 }
